@@ -21,6 +21,11 @@ app.get("/menu", (req, res) => {
     res.render("menu", { menuItems });
 });
 
+
+app.get("/about", (req, res) => {
+    res.json({"message": "Welcome to the app"})
+});
+
 // app.get("/hours", (req, res) => {
 //     res.render("hours", { workingHours });
 // });
