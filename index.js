@@ -14,7 +14,9 @@ const port = process.env.PORT;
 
 app.use(express.static("public"));
 
+
 app.set("view engine", "ejs");
+
 
 app.get("/", (req, res) => {
     res.render("index", { name: "Welcome to What Fare is Fair!" });
@@ -30,12 +32,14 @@ app.get("/about", (req, res) => {
     res.json({"message": "Welcome to the app"})
 });
 
+
 // app.get("/hours", (req, res) => {
     //     res.render("hours", { workingHours });
     // });
+
     
-    app.get('/hours', (req, res) => {
-        const days = [
+app.get('/hours', (req, res) => {
+    const days = [
             "monday",
             "tuesday",
             "wednesday",
@@ -46,6 +50,7 @@ app.get("/about", (req, res) => {
         ];
         res.render("hours", { workingHours, days });
     });
+    
     
 app.listen(port, () => {
         console.log(`Web server is listening at localhost:${port}`);
