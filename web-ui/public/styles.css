@@ -68,6 +68,11 @@ main{
      font-weight: bold;
 }
 
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
 /* Container menu */
 .container-menu{
    width: 100%;
